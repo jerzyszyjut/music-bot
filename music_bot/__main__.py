@@ -123,7 +123,7 @@ async def play(ctx):
 async def on_voice_state_update(member, before, after):
     if not member.bot and before.channel and not after.channel:
         if len(before.channel.members) == 1:
-            await before.channel.disconnect()
+            await before.channel.guild.voice_client.disconnect()
 
 @bot.command(
     name="add",
