@@ -1,5 +1,8 @@
 FROM python:3.10-slim
 
+ARG DISCORD_TOKEN
+ENV DISCORD_TOKEN=$DISCORD_TOKEN
+
 WORKDIR /app
 COPY . /app
 RUN apt-get update && apt-get install -y ffmpeg
