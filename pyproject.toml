@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "music-bot"
+version = "0.1.0"
+description = ""
+authors = ["Jerzy Szyjut <jerzy.szyjut@outlook.com>"]
+readme = "README.md"
+packages = [{include = "music_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+discord-py = {extras = ["voice"], version = "^2.3.2"}
+python-dotenv = "^1.0.0"
+black = "^23.12.1"
+pynacl = "^1.5.0"
+youtube-dl = "^2021.12.17"
+yt-dlp = "^2023.12.30"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+music-bot = "music_bot.__main__:main"
